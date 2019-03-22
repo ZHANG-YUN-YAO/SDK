@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no " />
+    <title></title>
+    <script src="{JS_PATH}rem.js"></script>
+	<script src="{JS_PATH}swiper-4.4.1.min.js"></script>
+	<script src="{JS_PATH}jquery-3.3.1.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}meishi.css"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}swiper-4.4.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}iconfont.css"/>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+    </script>
+</head>
+<body>
+	<!--header开始-->
+	<header>
+		<ul class="header-top">
+			<li>
+				<a href="javascript:history.back();">
+					<i class="iconfont icon-zuojiantou"></i>					
+				</a>
+			</li>
+
+			<li>
+				<p>{$currentcate['title']}</p>
+			</li>
+			<li>
+				<a href="">
+					<i class="iconfont icon-sousuo"></i>
+				</a>
+			</li>
+		</ul>
+		<div class="header-bottom ">
+		    <ul class="header-bottom-1  " style="white-space: nowrap">
+			    <li cid="0">
+				   <a href="">全部</a>
+			    </li>
+				{foreach $soncate as $v}
+			    <li cid="{$v['id']}">
+				   <a href="javascript:void(0)">{$v['title']}</a>
+			    </li>
+				{/foreach}
+			 <!--   <li>
+				   <a href="">香锅冒菜</a>
+			    </li>
+			    <li>
+				   <a href="">面食粥点</a>
+			    </li>
+			    <li>
+			       <a href="">小吃炸串</a>
+			    </li>
+			    <li>
+			       <a href="">地方菜系</a>
+			    </li>
+			    <li>
+			       <a href="">汉堡披萨</a>
+			    </li>
+			    <li>
+			       <a href="">日韩料理</a>
+			    </li>		    -->
+		    </ul>
+		</div>
+	</header>
+	<!--header结束-->
+	<!--排序方式开始-->
+	<div class="pxfs">
+		<ul>
+			<li type="sid">
+				综合排序<i class="iconfont icon-jiantou9"></i>
+
+			</li>
+			<li type="sale">
+				销量
+			</li>
+			<li type="score">
+				评价
+			</li>
+			<li>
+				筛选
+					<i class="iconfont icon-shaixuan"></i>				         
+
+			</li>
+		</ul>
+	</div>
+	<!--商家列表开始-->
+	<div class="main">
+		<div class="wrapper">
+			<div class="scrollUp" style=" text-align: center;display: none">
+				<i class="iconfont icon-load"></i>
+				<span style="font-size: 0.2rem;color: #333;">正在加载。。。</span>
+			</div>
+			<ul class="main-1 ">
+				<!--<li class="main-1-1">-->
+					<!--<a href="dpxq.html">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="main-1-1">-->
+					<!--<a href="">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="main-1-1">-->
+					<!--<a href="">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="main-1-1">-->
+					<!--<a href="">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="main-1-1">-->
+					<!--<a href="">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li class="main-1-1">-->
+					<!--<a href="">-->
+						<!--<div class="main-img">-->
+							<!--<img src="{IMAGE_PATH}sj4.png" alt="" />-->
+						<!--</div>-->
+						<!--<div class="main-text">-->
+							<!--<h2>COCO都可（百花谷店）</h2>-->
+							<!--<div class="star">-->
+								<!--<div class="stargrgy">-->
+									<!--<img src="{IMAGE_PATH}stargrgy.png"/>-->
+								<!--</div>-->
+								<!--<div class="star5" style="width: 80%;">-->
+									<!--<img src="{IMAGE_PATH}star.png"/>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="text-1">-->
+								<!--<span>起送￥20</span>-->
+								<!--<span>配送￥3.5</span>-->
+							<!--</div>-->
+							<!--<div class="text-2">-->
+								<!--<i class="iconfont icon-drink"></i>-->
+								<!--<span>奶茶果汁</span>-->
+							<!--</div>-->
+							<!--<div class="text-3">-->
+								<!--<span>首单减5</span>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="main-right">-->
+							<!--<div class="main-right-1">-->
+								<!--<i class="iconfont icon-gengduo"></i>-->
+							<!--</div>-->
+							<!--<div class="main-right-2">-->
+								<!--<span>30分钟</span>-->
+								<!--<span>909M</span>-->
+							<!--</div>-->
+							<!--<div class="main-right-3">蜂鸟专送</div>-->
+						<!--</div>-->
+					<!--</a>-->
+				<!--</li>-->
+			</ul>
+			<div class="scrollDown" style=" text-align: center;display: none">
+				<i class="iconfont icon-load"></i>
+				<span style="font-size: 0.2rem;color: #333;">正在加载。。。</span>
+			</div>
+		</div>
+	</div>
+<div class="loadBox">
+	<div class="loadimg">
+	</div>
+</div>
+</body>
+<script src="{JS_PATH}cate.js"></script>
+<script src="{JS_PATH}iscroll-probe.js"></script>
+</html>

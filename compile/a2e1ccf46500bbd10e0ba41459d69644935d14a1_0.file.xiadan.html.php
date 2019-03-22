@@ -1,0 +1,205 @@
+<?php
+/* Smarty version 3.1.33, created on 2018-11-15 00:41:47
+  from 'F:\phpbulider\wamp\www\sdk\app\view\xiadan.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5becc0cb3f82f8_58008598',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a2e1ccf46500bbd10e0ba41459d69644935d14a1' => 
+    array (
+      0 => 'F:\\phpbulider\\wamp\\www\\sdk\\app\\view\\xiadan.html',
+      1 => 1542242505,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5becc0cb3f82f8_58008598 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/rem.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+jquery-3.3.1.js"><?php echo '</script'; ?>
+>
+    <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>
+xiadan.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>
+iconfont.css"/>
+    <?php echo '<script'; ?>
+ type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    <?php echo '</script'; ?>
+>
+</head>
+<body>
+	<!--header开始-->
+	<header>
+		<a href="dpxq.html">
+		    <i class="iconfont icon-zuojiantou"></i>
+		</a>
+	</header>
+	<!--收货人开始-->
+	<div class="dizhi">
+		<ul class="dizhi-1">
+			<li>
+				<span>订单配送至</span>
+				<span>公司</span>
+			</li>
+			<li>
+				<span>凯通大厦</span>
+				<a href="">
+				    <i class="iconfont icon-arrow-right"></i>
+				</a>
+			</li>
+			<li>
+				<span>马（先生）</span>
+				<span>15235546350</span>
+			</li>
+		</ul>
+	</div>
+	<!--支付方式开始-->
+	<div class="zffs">
+		<div class="zffs-1">
+			<div class="zffs-top">
+				<a href="">
+					<div class="zffs-top-left">
+						<h4>送达时间</h4>
+						<p>准时达服务：超时十分钟享赔付</p>
+					</div>
+					<div class="zffs-top-right">
+						<span>尽快送达（11:02送达）</span>
+						<i class="iconfont icon-arrow-right"></i>
+					</div> 
+				</a>
+			</div>
+			<div class="zffs-bottom">
+				<a href="">
+					<div class="zffs-bottom-left">
+						<h4>支付方式</h4>
+						<span>花呗新用户</span>
+						<span>立减5元</span>
+					</div>
+					<div class="zffs-bottom-right">
+						<span>支付宝</span>
+						<i class="iconfont icon-arrow-right"></i>
+					</div> 
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--下单详情-->
+	<div class="xdxq">
+		<div class="xdxq-1">
+			<ul>
+				<li class="tab">COCO都可（百花谷店）</li>
+			<!--	<li class="">
+					<div class="imgthumb">
+						<img src="img/cd.png"/>
+					</div>
+					<div class="xdxq-1-text1">
+						<h3>莓莓果茶/大杯</h3>
+						<p>常规/常规冰/常规糖</p>
+					</div>
+					<div class="xdxq-1-text2">
+						<span>*3</span>
+						<span>￥39</span>
+					</div>
+				</li>-->
+				<li class="fee">
+					<span>配送费</span>
+					<span>蜂鸟专送</span>
+					<span>￥3.5</span>
+				</li>
+				<li class="forth">
+					<div>红包</div>
+					<div>
+						<span>无可用红包</span>
+						<a href="">
+					     	<i class="iconfont icon-arrow-right"></i>
+						</a>
+					</div>
+				</li>
+				<!--<li >-->
+					<!--<span>小计</span>-->
+					<!--<span>￥42.5</span>-->
+				<!--</li>-->
+			</ul>
+		</div>
+		<div class="xdxq-2">
+			<div class="xdxq-2-left">
+				<h4>配送增值服务</h4>
+				<p>超时10分钟起赔，超时15分钟赔付10.7元，超时30分钟赔付25.2元</p>
+			</div>
+			<div class="xdxq-2-right">
+				<span>￥0.7</span>
+				<a href="">
+					<i class="iconfont icon-dui"></i>
+				</a>
+			</div>
+		</div>
+		<div class="xdxq-3">
+			<ul>
+				<li>
+					<a href="">
+						<div>订单备注</div>
+						<div>
+							<span>口味、偏好</span>
+							<i class="iconfont icon-arrow-right"></i>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div>餐具份数</div>
+						<div>
+							<i class="iconfont icon-jienenghuanbao"></i>
+							<span>无需餐具</span>
+							<i class="iconfont icon-arrow-right"></i>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div>号码保护</div>
+						<div>
+							<i class="iconfont icon-huadonganniuyes"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--footer-->
+	<footer>
+		<div class="footer-left">￥42.5</div>
+		<div class="footer-right">
+			<a href="/sdk/index.php/dpxq/pay">确认支付</a>
+		</div>
+	</footer>
+</body>
+<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+confirm.js"><?php echo '</script'; ?>
+>
+</html>
+<?php }
+}

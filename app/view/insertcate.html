@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+
+    <link rel="stylesheet" href="{CSS_PATH}layui.css">
+    <link rel="stylesheet" href="{CSS_PATH}insertcate.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+    <!--引入头部-->
+    {include file ='header.html'}
+
+
+    <div class="layui-side layui-bg-black">
+
+        <!--引入侧边栏-->
+        {include file ='slide.html'}
+
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <form class="layui-form" action="" id="myform">
+                <div class="layui-form-item">
+                    <label class="layui-form-label" type="sel">父级栏目</label>
+
+                    <div class="layui-input-block">
+                        <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">-->
+                            <select name="pid" lay-verify="required">
+                                <option value="0">一级栏目</option>
+                                {$str}
+                                <!--<option value="1">上海</option>-->
+                                <!--<option value="2">广州</option>-->
+                                <!--<option value="3">深圳</option>-->
+                                <!--<option value="4">杭州</option>-->
+                            </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">栏目名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入栏目" autocomplete="off" class="layui-input">
+                    </div>
+                    <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+                </div>
+                <!--上传文件-->
+                <div  class="layui-form-item">
+                    <label class="layui-form-label">上传缩略图</label>
+                    <button type="button" class="layui-btn" id="test1">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                </div>
+                <!--<div class="layui-form-item">-->
+                    <!--<label class="layui-form-label"><img src="res.url" style="width: 80px;height: 80px; margin-left: 105px" id="thumb" alt=""></label>-->
+                <!--</div>-->
+
+                <ul class="imgbox">
+                    <!--<li>-->
+                        <!--<img src="/sdk/static/images/logo.png" name="thumb" id="thumb" alt="" width="100px" height="80px">-->
+                        <!--<div class="mask"></div>-->
+                        <!--<div class="button">-->
+                            <!--<i class="layui-icon layui-icon-delete"></i>-->
+                            <!--<i class="layui-icon layui-icon-search"></i>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+
+
+
+                <input type="hidden" name="thumb">
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit1">立即提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+</div>
+<script src="{LAYUIJS_PATH}layui.all.js"></script>
+<script src="{JS_PATH}adminlogin.js"></script>
+<script src="{JS_PATH}insertcate.js"></script>
+</body>
+</html>
